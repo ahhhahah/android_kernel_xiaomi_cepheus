@@ -23,16 +23,18 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: Pull Kernel
+        run: |
+          git submodule update --init
+          git pull https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux -t v4.14.331
       - name: Build
         run: |
           bash ./build.sh
-
       - name: Release
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
           automatic_release_tag: "latest"
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
           prerelease: false
           files: |
             out/*.zip
