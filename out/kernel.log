@@ -1,0 +1,7 @@
+make[1]: Entering directory '/home/ahhh/Desktop/android_kernel_xiaomi_cepheus/out'
+  GEN     ./Makefile
+  HOSTCC  scripts/basic/fixdep
+scripts/Makefile.host:102: recipe for target 'scripts/basic/fixdep' failed
+../Makefile:503: recipe for target 'scripts_basic' failed
+make[1]: Leaving directory '/home/ahhh/Desktop/android_kernel_xiaomi_cepheus/out'
+Makefile:153: recipe for target 'sub-make' failed
