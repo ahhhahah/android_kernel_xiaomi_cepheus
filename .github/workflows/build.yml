@@ -26,6 +26,7 @@ jobs:
       - name: Pull Kernel
         run: |
           git submodule update --init --recursive
+          git submodule update --remote
           # git config pull.rebase false
           # git pull https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux -t v4.14.331
       - name: Build
